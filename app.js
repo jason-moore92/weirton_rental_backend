@@ -66,7 +66,7 @@ app.use("/api/users", users);
 
 // Import household route
 const household = require("./routes/household.router");
-app.use("/household", household);
+app.use("/api/household", household);
 
 const server = require("http").createServer(app);
 server.listen(process.env.PORT || 5000, () => {
