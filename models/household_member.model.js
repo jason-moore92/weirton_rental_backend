@@ -5,7 +5,8 @@ const HouseholdMemberSchema = new Schema(
     {
         firstName: { type: String, required: true},
         lastName: {type: String},
-        birthday: {type: String, required: true},
+        birthday: { type: String, required: true },
+        type: { type: String, required: true },
         gender: {type: String, required: true},
         isStudent: { type: Boolean, required: true },
         isHead: { type: Boolean, default: false },

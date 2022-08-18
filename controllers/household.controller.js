@@ -63,6 +63,7 @@ async function addNew(req, res) {
             householdMemberModel.firstName = member.firstName
             householdMemberModel.lastName = member.lastName
             householdMemberModel.birthday = member.birthday
+            householdMemberModel.type = member.type
             householdMemberModel.gender = member.gender
             householdMemberModel.isStudent = member.isStudent
             if (index == 0) {
@@ -80,7 +81,7 @@ async function addNew(req, res) {
             var incomeModel = new IncomeModel()
             incomeModel.memberId = householdMemberModel.id
             incomeModel.type = member.incomeType
-            incomeModel.annualAmount = member.incomeAmount
+            incomeModel.annualAmount = member.annualAmount
             incomeModel = await incomeModel.save();
         }
 
