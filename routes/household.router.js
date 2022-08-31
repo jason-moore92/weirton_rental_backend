@@ -8,4 +8,25 @@ router.post(
   HouseholdController.addNew
 );
 
+router.get(
+  "/getAllHomes",
+  HouseholdController.getAllHomes
+);
+
+router.post(
+  "/updateHome",
+  HouseholdController.updateHome
+);
+
+router.post(
+  "/addHome",
+  HouseholdController.addNewHome
+);
+
+router.post(
+  "/deleteHome",
+  HouseholdController.deleteHome
+);
+
+
 module.exports = router;

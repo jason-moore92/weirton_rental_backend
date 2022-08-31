@@ -24,6 +24,11 @@ const HomeSchema = new Schema(
     }
 );
 
+HomeSchema.pre('save', async function (next) {
+    let product = this;
+    return next();
+});
+
 // Export the model
 module.exports = mongoose.model('Home', HomeSchema);
 
