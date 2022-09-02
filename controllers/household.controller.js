@@ -69,6 +69,18 @@ async function addNew(req, res) {
 
 }
 
+async function getAllHouseholdMembers(req, res) {
+    try {
+        let allMemebers = await HouseholdMemberModel.find();
+        res.json({
+            success: true,
+            data: allMemebers,
+        });
+    } catch (error) {
+        console.error(error);
+    }
+}
+
 // async function addNew(req, res) {
 //     try {
 //         const {
@@ -232,6 +244,7 @@ async function getAllHomes(req, res) {
 
 module.exports = {
     addNew,
+    getAllHouseholdMembers,
     getAllHomes,
     addNewHome,
     updateHome,

@@ -8,6 +8,13 @@ router.post(
   HouseholdController.addNew
 );
 
+
+
+router.get(
+  "/getAllHouseholdMembers",
+  HouseholdController.getAllHouseholdMembers
+);
+
 router.get(
   "/getAllHomes",
   HouseholdController.getAllHomes
