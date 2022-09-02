@@ -24,6 +24,9 @@ const HomeSchema = new Schema(
     }
 );
 
+// creator: { type: mongoose.Schema.Types.ObjectId, ref: 'User' },
+// const savedOrder = await Order.findById(order._id).populate('meal').populate('chef').populate('creator');
+
 HomeSchema.pre('save', async function (next) {
     let product = this;
     return next();

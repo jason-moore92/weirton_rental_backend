@@ -10,8 +10,40 @@ const HouseholdMemberSchema = new Schema(
         gender: {type: String, required: true},
         isStudent: { type: Boolean, required: true },
         isHead: { type: Boolean, default: false },
-        oldHomeId: { type: String },
-        newHomeId: { type: String },
+        // oldHomeId: { type: String },
+        // newHomeId: { type: String },
+        oldHome: {
+            address: { type: String },
+            city: { type: String },
+            state: { type: String },
+            zipcode: { type: String },
+            country: { type: String },
+            msa: { type: String },
+            tractCode: { type: String },
+            stateCode: { type: String },
+            location: {
+                type: {
+                    type: String
+                },
+                coordinates: [Number]
+            },
+        },
+        newHome: {
+            address: { type: String },
+            city: { type: String },
+            state: { type: String },
+            zipcode: { type: String },
+            country: { type: String },
+            msa: { type: String },
+            tractCode: { type: String },
+            stateCode: { type: String },
+            location: {
+                type: {
+                    type: String
+                },
+                coordinates: [Number]
+            },
+        },
         headId: { type: String },
     },
     {
